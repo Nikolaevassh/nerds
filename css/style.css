@@ -16,16 +16,38 @@ a {
 }
 
 /* шапка */
+.header {
+  background-color: #eeeeee;
+}
+
 .main-navigation {
   line-height: 30px;
   font-weight: 500;
   text-transform: uppercase;
 
-  background-color: #eeeeee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-navigation img {
+  width: 160px;
+  height: 65px;
 }
 
 .site-navigation {
   list-style: none;
+  margin: 0;
+  padding: 0;
+
+  width: 440px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.basket {
+  width: 160px;
 }
 
 .site-navigation a,
@@ -50,6 +72,8 @@ a {
 
 .promo-slides {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .promo-slide .promo-slide-title,
@@ -86,6 +110,15 @@ a {
 /* услуги */
 .services-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.services-item {
+  width: 300px;
 }
 
 .services-item-title {
@@ -121,6 +154,15 @@ a {
 }
 
 /* о нас */
+.about-company .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-company-left {
+  width: 660px;
+}
+
 .about-company-title,
 .popup-title {
   font-size: 45px;
@@ -133,6 +175,10 @@ a {
 .indicators-title {
   font-weight: 700;
   color: #000000;
+}
+
+.about-company-right {
+  width: 360px;
 }
 
 .about-company-logo {
@@ -161,6 +207,15 @@ a {
 /* партнёры */
 .partners-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.partners-item {
+  width: 260px;
 }
 
 .partners-item img {
@@ -176,6 +231,11 @@ a {
 }
 
 /* контакты */
+.map-placeholder {
+  width: 100%;
+  height: auto;
+}
+
 .contacts-info {
   background-color: #ffffff;
 }
@@ -193,8 +253,31 @@ a {
 }
 
 /* футер */
+.footer .container {
+  display: flex;
+}
+
 .footer-social {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 260px;
+  margin-right: 140px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-social-item {
+  width: 80px;
+}
+
+.call-to-follow {
+  width: 560px;
+}
+
+.call-to-follow p {
+  margin: 0;
 }
 
 .call-to-follow-title {
@@ -221,6 +304,11 @@ a {
 
 /* КАТАЛОГ */
 /* шапка */
+.main-navigation .header-logo {
+  width: 160px;
+  height: 65px;
+}
+
 .site-navigation-item-current a {
   border-bottom: 2px solid #fb565a;
 }
@@ -230,7 +318,21 @@ a {
   background-color: #eeeeee;
 }
 
+.page-title h1 {
+  margin: 0;
+}
+
+/* страница с фильтрами, сортировкой, пагинацией и товарами */
+.page-content {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* фильтр */
+.filters {
+  width: 260px;
+}
+
 .filters-form fieldset {
   border: none;
 }
@@ -255,8 +357,8 @@ a {
   color: #000000;
 }
 
-.filters-radio-input:disabled + label,
-.filters-check-input:disabled + label {
+.filters-radio-input:disabled+label,
+.filters-check-input:disabled+label {
   color: rgba(40, 49, 54, 0.3);
 }
 
@@ -274,23 +376,51 @@ a {
   background-color: #d5d5d5;
 }
 
+/* каталог-правая-сторона */
+.catalog-right-side {
+  width: 760px;
+}
+
 /* сортировка */
+.sorting {
+  display: flex;
+  justify-content: space-between;
+}
+
 .sorting-title {
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+
+  width: 160px;
+}
+
+.sorting-content {
+  width: 360px;
+
+  display: flex;
+  justify-content: space-between;
 }
 
 .sorting-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+
+  width: 280px;
+
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .sorting-item {
   font-size: 14px;
   line-height: 18px;
   color: rgba(0, 0, 0, 0.3);
+  margin-right: 25px;
 }
 
 .sorting-item:hover {
@@ -302,9 +432,23 @@ a {
   color: #000000;
 }
 
+.sorting-controls {
+  width: 60px;
+}
+
 /* перечень товаров */
 .catalog-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.catalog-item {
+  width: 360px;
 }
 
 .img-browser {
@@ -330,6 +474,12 @@ a {
 /* пагинация */
 .pagination-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .pagination-list a,
@@ -340,6 +490,10 @@ a {
   text-transform: uppercase;
 
   background-color: #eeeeee;
+}
+
+.pagination-item {
+  margin-right: 11px;
 }
 
 .pagination-list a:hover,
@@ -355,4 +509,14 @@ a {
 
 .pagination-item-current {
   background-color: #ffffff;
+}
+
+/* сетка */
+.container {
+  max-width: 1440px;
+  width: 100%;
+  padding-left: 140px;
+  padding-right: 140px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }

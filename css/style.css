@@ -15,6 +15,29 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* шапка */
 .header {
   background-color: #eeeeee;
@@ -28,11 +51,20 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 49px;
 }
 
 .main-navigation img {
   width: 160px;
   height: 65px;
+}
+
+.main-navigation img:hover {
+  opacity: 0.8;
+}
+
+.main-navigation img:active {
+  opacity: 0.3;
 }
 
 .site-navigation {
@@ -44,10 +76,25 @@ a {
 
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .basket {
   width: 160px;
+  text-align: right;
+  position: relative;
+}
+
+.basket a::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 41px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/cart-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .site-navigation a,
@@ -68,6 +115,7 @@ a {
 /* промо-слайды */
 .promo {
   background-color: #eeeeee;
+  position: relative;
 }
 
 .promo-slides {
@@ -76,21 +124,67 @@ a {
   padding: 0;
 }
 
+.promo-slide {
+  display: none;
+  padding: 78px 0 80px 0;
+}
+
+.promo-slide:nth-child(1) {
+  display: block;
+}
+
+.promo-slide:nth-child(1) {
+  background-image: url("../img/slide1.png");
+  background-repeat: no-repeat;
+  background-position: 93% 18px;
+}
+
+.promo-slide:nth-child(2) {
+  background-image: url("../img/slide2.png");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+
+.promo-slide:nth-child(3) {
+  background-image: url("../img/slide3.png");
+  background-repeat: no-repeat;
+  background-position: 100% 20px;
+}
+
 .promo-slide .promo-slide-title,
 .page-title h1 {
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
   color: #000000;
+  margin: 0;
+}
+
+.promo-slide .promo-slide-title {
+  max-width: 600px;
+  margin-bottom: 27px;
+}
+
+.promo-slide-description {
+  max-width: 430px;
+  margin: 0;
+  margin-bottom: 38px;
 }
 
 .btn {
+  display: block;
+  width: 240px;
+  padding: 13px 0;
+
   line-height: 18px;
   font-weight: 500;
   color: #ffffff;
   text-transform: uppercase;
+  text-align: center;
 
   background-color: #fb565a;
+  border-radius: 3px;
+  border: none;
 }
 
 .btn:hover {
@@ -101,24 +195,89 @@ a {
   color: rgba(255, 255, 255, 0.3);
 
   background-color: #d7373b;
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 
 .slides-switches {
-  list-style: none;
+  position: absolute;
+  left: 50%;
+  bottom: 104px;
+  z-index: 100;
+
+  width: 160px;
+  height: 18px;
+
+  text-align: center;
+  font-size: 0;
+  transform: translateX(-50%);
+}
+
+.slides-switches i {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  padding: 8px;
+
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slides-switches i::after {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+
+  width: 18px;
+  height: 18px;
+
+  background-color: #ffffff;
+
+  border-radius: 50%;
+}
+
+.slides-switches .slides-switches-active::before {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+
+  width: 4px;
+  height: 4px;
+  margin: -4px;
+
+  background-color: inherit;
+  border: 2px solid #c1c1c1;
+  border-radius: 50%;
 }
 
 /* услуги */
+.services {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-bottom: 2px solid #eeeeee;
+}
+
 .services-list {
   list-style: none;
   margin: 0;
   padding: 0;
 
   display: flex;
-  justify-content: space-between;
 }
 
 .services-item {
   width: 300px;
+  margin-right: 100px;
+}
+
+.services-item:last-child {
+  margin-right: 60px;
 }
 
 .services-item-title {
@@ -127,6 +286,18 @@ a {
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+  margin: 0;
+  margin-top: 23px;
+  margin-bottom: 24px;
+}
+
+.services-item-description {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.btn-services {
+  width: 160px;
 }
 
 .btn-green {
@@ -154,6 +325,11 @@ a {
 }
 
 /* о нас */
+.about-company {
+  padding-top: 40px;
+  padding-bottom: 70px;
+}
+
 .about-company .container {
   display: flex;
   justify-content: space-between;
@@ -169,12 +345,57 @@ a {
   line-height: 45px;
   font-weight: 500;
   color: #000000;
+  margin: 0;
+}
+
+.about-company-title {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  max-width: 660px;
+}
+
+.about-company-description {
+  max-width: 660px;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.about-company-list {
+  max-width: 460px;
 }
 
 .about-company-list-title,
 .indicators-title {
   font-weight: 700;
   color: #000000;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.about-company-list-title {
+  margin-bottom: 27px;
+}
+
+.about-company-list-description {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-company-list-item {
+  position: relative;
+  padding-left: 37px;
+  margin-bottom: 25px;
+}
+
+.about-company-list-item::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  width: 25px;
+  height: 2px;
+  background-color: #fb565a;
 }
 
 .about-company-right {
@@ -186,6 +407,19 @@ a {
   background-repeat: no-repeat;
   width: 360px;
   height: 208px;
+  margin-bottom: 40px;
+}
+
+.indicators-title {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.value,
+.value-description {
+  width: 120px;
+  height: 46px;
+  padding: 0;
 }
 
 .value {
@@ -193,6 +427,7 @@ a {
   line-height: 10.06px;
   font-weight: 700;
   color: #000000;
+  padding-bottom: 5px;
 }
 
 .percent {
@@ -212,10 +447,28 @@ a {
 
   display: flex;
   justify-content: space-between;
+
+  border-top: 2px solid #eeeeee;
+  border-bottom: 2px solid #eeeeee;
 }
 
 .partners-item {
+  position: relative;
   width: 260px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partners-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 55px;
+  right: -2px;
+  width: 2px;
+  height: 52px;
+  background-color: #eeeeee;
 }
 
 .partners-item img {
@@ -318,10 +571,6 @@ a {
   background-color: #eeeeee;
 }
 
-.page-title h1 {
-  margin: 0;
-}
-
 /* страница с фильтрами, сортировкой, пагинацией и товарами */
 .page-content {
   display: flex;
@@ -357,8 +606,8 @@ a {
   color: #000000;
 }
 
-.filters-radio-input:disabled+label,
-.filters-check-input:disabled+label {
+.filters-radio-input:disabled + label,
+.filters-check-input:disabled + label {
   color: rgba(40, 49, 54, 0.3);
 }
 

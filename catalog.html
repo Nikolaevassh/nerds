@@ -36,37 +36,69 @@
                 <h2 class="visually-hidden">Фильтр товаров</h2>
                 <div class="container">
                     <form class="filters-form" action="https://echo.htmlacademy.ru" method="GET">
-                        <fieldset>
+                        <fieldset class="filter-item filter-item-price">
                             <legend>Стоимость:</legend>
-                            <input class="filters-range-input" type="range" min="0" max="20000" step="1">
-                            <label class="filters-range-label">От<input class="filters-range-min" type="text" name="range-min"></label>
-                            <label class="filters-range-label">До<input class="filters-range-max" type="text" name="range-max"></label>
+                            <!-- <input class="filters-range-input" type="range" min="0" max="20000" step="1"> -->
+                            <div class="range-filter">
+                                <div class="range-controls">
+                                    <div class="scale">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <div class="toggle toggle-min"></div>
+                                    <div class="toggle toggle-max"></div>
+                                </div>
+                                <div class="price-controls">
+                                    <label class="filters-range-label min-price">От<input class="min-price" type="text"
+                                            name="range-min" value="0"></label>
+                                    <label class="filters-range-label max-price">До<input class="max-price" type="text"
+                                            name="range-max" value="15000"></label>
+                                </div>
+                            </div>
                         </fieldset>
-                        <fieldset>
+                        <fieldset class="filter-item filter-item-grid">
                             <legend>Сетка:</legend>
-                            <input class="filters-radio-input" type="radio" name="grid" value="adaptive" id="adaptive-field"
-                                checked>
-                            <label class="filters-radio-label" for="adaptive-field">Адаптивная</label>
-                            <input class="filters-radio-input" type="radio" name="grid" value="fix" id="fix-field">
-                            <label class="filters-radio-label" for="fix-field">Фиксированная</label>
-                            <input class="filters-radio-input" type="radio" name="grid" value="rubber" id="rubber-field">
-                            <label class="filters-radio-label" for="rubber-field">Резиновая</label>
+                            <p>
+                                <input class="filters-radio-input" type="radio" name="grid" value="adaptive" id="adaptive-field"
+                                    checked>
+                                <label class="filters-radio-label" for="adaptive-field"><span class="filters-radio-indicator"></span>Адаптивная</label>
+                            </p>
+                            <p>
+                                <input class="filters-radio-input" type="radio" name="grid" value="fix" id="fix-field">
+                                <label class="filters-radio-label" for="fix-field"><span class="filters-radio-indicator"></span>Фиксированная</label>
+                            </p>
+                            <p>
+                                <input class="filters-radio-input" type="radio" name="grid" value="rubber" id="rubber-field">
+                                <label class="filters-radio-label" for="rubber-field"><span class="filters-radio-indicator"></span>Резиновая</label>
+                            </p>
                         </fieldset>
-                        <fieldset>
+                        <fieldset class="filter-item filter-item-features">
                             <legend>Особенности:</legend>
-                            <input class="filters-check-input" type="checkbox" name="feature" value="slider-feature" id="check-1"
-                                checked>
-                            <label class="filters-check-label" for="check-1">Слайдер</label>
-                            <input class="filters-check-input" type="checkbox" name="feature" value="features-block-feature"
-                                id="check-2">
-                            <label class="filters-check-label" for="check-2">Блок преимуществ</label>
-                            <input class="filters-check-input" type="checkbox" name="feature" value="news-feature" id="check-3"
-                                checked>
-                            <label class="filters-check-label" for="check-3">Новости</label>
-                            <input class="filters-check-input" type="checkbox" name="feature" value="galary-feature" id="check-4">
-                            <label class="filters-check-label" for="check-4">Галерея</label>
-                            <input class="filters-check-input" type="checkbox" name="feature" value="busket-feature" id="check-5">
-                            <label class="filters-check-label" for="check-5">Корзина</label>
+                            <p>
+                                <input class="filters-check-input" type="checkbox" name="feature" value="slider-feature"
+                                    id="check-1" checked>
+                                <label class="filters-check-label" for="check-1"><span class="filter-check-indicator"></span>Слайдер</label>
+                            </p>
+                            <p>
+                                <input class="filters-check-input" type="checkbox" name="feature" value="features-block-feature"
+                                    id="check-2">
+                                <label class="filters-check-label" for="check-2"><span class="filter-check-indicator"></span>Блок
+                                    преимуществ</label>
+                            </p>
+                            <p>
+                                <input class="filters-check-input" type="checkbox" name="feature" value="news-feature"
+                                    id="check-3" checked>
+                                <label class="filters-check-label" for="check-3"><span class="filter-check-indicator"></span>Новости</label>
+                            </p>
+                            <p>
+                                <input class="filters-check-input" type="checkbox" name="feature" value="galary-feature"
+                                    id="check-4">
+                                <label class="filters-check-label" for="check-4"><span class="filter-check-indicator"></span>Галерея</label>
+                            </p>
+                            <p>
+                                <input class="filters-check-input" type="checkbox" name="feature" value="busket-feature"
+                                    id="check-5">
+                                <label class="filters-check-label" for="check-5"><span class="filter-check-indicator"></span>Корзина</label>
+                            </p>
                         </fieldset>
                     </form>
                     <button class="btn btn-filters">Показать</button>

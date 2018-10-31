@@ -747,7 +747,7 @@ input[type="radio"].visually-hidden {
 }
 
 /* страница с фильтрами, сортировкой, пагинацией и товарами */
-.page-content {
+.page-content .container {
   display: flex;
   justify-content: space-between;
 }
@@ -906,11 +906,13 @@ input[type="radio"].visually-hidden {
   border-color: #4d4d4d;
 }
 
-.filters-radio-input:disabled+.filters-radio-label .filters-radio-indicator {
+.filters-radio-input:disabled + .filters-radio-label .filters-radio-indicator {
   border-color: #ededed;
 }
 
-.filters-radio-input:checked+.filters-radio-label .filters-radio-indicator::before {
+.filters-radio-input:checked
+  + .filters-radio-label
+  .filters-radio-indicator::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -922,12 +924,14 @@ input[type="radio"].visually-hidden {
   background-color: #a6a6a6;
 }
 
-.filters-radio-input:checked+.filters-radio-label .filters-radio-indicator:hover::before {
+.filters-radio-input:checked
+  + .filters-radio-label
+  .filters-radio-indicator:hover::before {
   background-color: #4d4d4d;
 }
 
-.filters-radio-input:disabled+label,
-.filters-check-input:disabled+label {
+.filters-radio-input:disabled + label,
+.filters-check-input:disabled + label {
   color: rgba(40, 49, 54, 0.3);
 }
 
@@ -971,11 +975,13 @@ input[type="radio"].visually-hidden {
   border-color: #4d4d4d;
 }
 
-.filters-check-input:disabled+.filters-check-label .filter-check-indicator {
+.filters-check-input:disabled + .filters-check-label .filter-check-indicator {
   border-color: #ededed;
 }
 
-.filters-check-input:checked+.filters-check-label .filter-check-indicator::before {
+.filters-check-input:checked
+  + .filters-check-label
+  .filter-check-indicator::before {
   content: "";
   position: absolute;
   top: 38%;
@@ -989,7 +995,9 @@ input[type="radio"].visually-hidden {
   transform: translate(-50%, -75%) rotate(-45deg);
 }
 
-.filters-check-input:checked+.filters-check-label .filter-check-indicator:hover::before {
+.filters-check-input:checked
+  + .filters-check-label
+  .filter-check-indicator:hover::before {
   border-color: #4d4d4d;
   border-top-color: transparent;
   border-right-color: transparent;
@@ -1013,12 +1021,14 @@ input[type="radio"].visually-hidden {
 /* каталог-правая-сторона */
 .catalog-right-side {
   width: 760px;
+  margin-top: 57px;
 }
 
 /* сортировка */
 .sorting {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 56px;
 }
 
 .sorting-title {
@@ -1029,10 +1039,11 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
 
   width: 160px;
+  margin: 0;
 }
 
 .sorting-content {
-  width: 360px;
+  width: 560px;
 
   display: flex;
   justify-content: space-between;
@@ -1043,10 +1054,10 @@ input[type="radio"].visually-hidden {
   margin: 0;
   padding: 0;
 
-  width: 280px;
+  width: 480px;
 
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   flex-wrap: wrap;
 }
 
@@ -1054,6 +1065,7 @@ input[type="radio"].visually-hidden {
   font-size: 14px;
   line-height: 18px;
   color: rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
   margin-right: 25px;
 }
 
@@ -1068,6 +1080,26 @@ input[type="radio"].visually-hidden {
 
 .sorting-controls {
   width: 60px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sorting-controls-down path,
+.sorting-controls-up path {
+  fill: #ededed;
+}
+
+.sorting-controls-down:hover path,
+.sorting-controls-up:hover path {
+  fill: #a6a6a6;
+}
+
+.sorting-controls-down:active path,
+.sorting-controls-up:active path,
+.sorting-controls-current path {
+  fill: #231f20;
 }
 
 /* перечень товаров */

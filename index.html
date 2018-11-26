@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Нёрдс</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
@@ -13,7 +14,9 @@
     <header class="header">
         <div class="container">
             <nav class="main-navigation">
+                <button class="btn-mobile-navigation">Меню</button>
                 <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии Nerds">
+                <button class="btn-menu-close">Закрыть меню</button>
                 <ul class="site-navigation">
                     <li class="site-navigation-item"><a href="#">Студия</a></li>
                     <li class="site-navigation-item"><a href="#">Клиенты</a></li>
@@ -37,15 +40,17 @@
                 <h2 class="visually-hidden">Наши принципы работы</h2>
                 <ul class="promo-slides">
                     <li class="promo-slide">
-                        <p class="promo-slide-title">Долго, дорого,<br> скрупулезно.</p>
-                        <p class="promo-slide-description">Математически выверенный дизайн<br> для вашего сайта или
+                        <p class="promo-slide-title">Долго, дорого,<br class="hidden-sm"> скрупулезно.</p>
+                        <p class="promo-slide-description">Математически выверенный дизайн<br> для
+                            вашего сайта или
                             мобильного
                             приложения.</p>
                         <a class="btn btn-promo" href="#">Узнать больше</a>
                     </li>
                     <li class="promo-slide">
                         <p class="promo-slide-title">Любим математику<br> как никто другой</p>
-                        <p class="promo-slide-description">Никакого креатива, только математические формулы<br> для
+                        <p class="promo-slide-description">Никакого креатива, только математические формулы<br class="hidden-sm">
+                            для
                             расчета
                             идеальных пропорций.</p>
                         <a class="btn btn-promo" href="#">Узнать больше</a>

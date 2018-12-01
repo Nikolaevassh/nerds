@@ -3,9 +3,12 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Нёрдс: магазин</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -13,16 +16,21 @@
     <header class="header">
         <div class="container">
             <nav class="main-navigation">
-                <a class="header-logo" href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии Nerds"></a>
-                <ul class="site-navigation">
-                    <li class="site-navigation-item"><a href="#">Студия</a></li>
-                    <li class="site-navigation-item"><a href="#">Клиенты</a></li>
-                    <li class="site-navigation-item site-navigation-item-current"><a href="#">Магазин</a></li>
-                    <li class="site-navigation-item"><a href="#">Контакты</a></li>
-                </ul>
+                <button class="btn-mobile-navigation">Меню</button>
+                <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии Nerds">
+                <div class="main-nav-right">
+                    <button class="btn-menu-close"><i class="fas fa-times"></i>Закрыть меню</button>
+                    <ul class="site-navigation">
+                        <li class="site-navigation-item"><a href="#">Студия</a></li>
+                        <li class="site-navigation-item"><a href="#">Клиенты</a></li>
+                        <li class="site-navigation-item site-navigation-item-current"><a href="catalog.html">Магазин</a></li>
+                        <li class="site-navigation-item"><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
                 <div class="basket">
                     <a class="site-navigation-item" href="#">Корзина</a>
                 </div>
+
             </nav>
         </div>
     </header>
@@ -33,6 +41,7 @@
         </div>
         <div class="page-content">
             <div class="container">
+                <button class="btn-filters-form">Открыть дополнительный фильтр поиска<i class="fas fa-angle-down"></i></button>
                 <section class="filters">
                     <h2 class="visually-hidden">Фильтр товаров</h2>
 

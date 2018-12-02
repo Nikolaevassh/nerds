@@ -513,6 +513,12 @@ input[type="radio"].visually-hidden {
   position: relative;
 }
 
+.contacts iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .map-placeholder {
   display: block;
   width: 100%;
@@ -530,6 +536,7 @@ input[type="radio"].visually-hidden {
   padding-bottom: 47px;
   padding-right: 50px;
   padding-left: 50px;
+  z-index: 3;
 }
 
 .contacts-info-title {

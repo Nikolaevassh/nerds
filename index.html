@@ -69,12 +69,18 @@
                     </li>
                 </ul>
                 <div class="slides-switches">
-                    <input class="" type="radio" name="slide" id="first-slide" checked>
-                    <label class="" for="first-slide">Первый слайд</label>
-                    <input class="" type="radio" name="slide" id="second-slide">
-                    <label class="" for="second-slide">Второй слайд</label>
-                    <input class="" type="radio" name="slide" id="third-slide">
-                    <label class="" for="third-slide">Третий слайд</label>
+                    <p class="slides-switches-item">
+                        <input type="radio" name="slide" id="first-slide" checked>
+                        <label class="" for="first-slide">Первый слайд</label>
+                    </p>
+                    <p class="slides-switches-item">
+                        <input type="radio" name="slide" id="second-slide">
+                        <label class="" for="second-slide">Второй слайд</label>
+                    </p>
+                    <p class="slides-switches-item">
+                        <input type="radio" name="slide" id="third-slide">
+                        <label class="" for="third-slide">Третий слайд</label>
+                    </p>
                 </div>
             </div>
         </section>
@@ -186,7 +192,7 @@
 
         <section class="contacts">
             <h2 class="visually-hidden">Как с нами связаться</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002867!2d30.320858715769422!3d59.93871916905457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1543738728158"
+            <iframe class="hidden-sm" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002867!2d30.320858715769422!3d59.93871916905457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1543738728158"
                 width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
             <img class="map-placeholder" src="img/map.jpg" alt="Офис компании по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
             <div class="container">
@@ -194,7 +200,7 @@
                     <p class="contacts-info-title">NЁRDS DESIGN STUDIO</p>
                     <p class="contacts-info-description">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</p>
                     <p class="contacts-info-tel">тел. +7 (812) 275-75-75</p>
-                    <button class="btn btn-contacts">Напишите нам</button>
+                    <button class="btn btn-contacts js-contacts-popup">Напишите нам</button>
                 </div>
             </div>
         </section>
@@ -227,29 +233,34 @@
         </div>
     </footer>
 
-    <section class="popup">
+    <section class="popup js-feedback-popup">
         <h2 class="visually-hidden">Форма обратной связи</h2>
         <p class="popup-title">Напишите нам</p>
         <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
             <div class="feedback-form-contacts-info">
                 <p class="feedback-form-item">
                     <label for="feedback-name-field">Ваше имя:</label>
-                    <input type="text" name="feedback-name" placeholder="Имя Фамилия" id="feedback-name-field">
+                    <input type="text" name="feedback-name" placeholder="Имя Фамилия" id="feedback-name-field" required>
                 </p>
 
                 <p class="feedback-form-item">
                     <label for="feedback-email-field">Ваш e-mail:</label>
-                    <input type="email" name="feedback-email" placeholder="email@example.com" id="feedback-email-field">
+                    <input type="email" name="feedback-email" placeholder="email@example.com" id="feedback-email-field"
+                        required>
                 </p>
             </div>
             <p class="feedback-form-item">
                 <label for="feedback-comment-field">Текст письма:</label>
-                <textarea name="feedback-comment" id="feedback-comment-field">В свободной форме</textarea>
+                <textarea name="feedback-comment" id="feedback-comment-field" required>В свободной форме</textarea>
             </p>
         </form>
         <button class="btn btn-popup">Отправить</button>
         <button class="popup-close" type="button">Закрыть</button>
     </section>
+    <div class="modal-overlay"></div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 

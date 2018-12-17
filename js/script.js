@@ -67,8 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // filters
-
-
     var openFilters = document.querySelector(".btn-filters-form");
     var filters = document.querySelector(".mobile .filters");
 

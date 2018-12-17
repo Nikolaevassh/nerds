@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
         page.classList.add("mobile");
     }
 
+    document.documentElement.classList.replace('no-js', 'js');
+
     // open menu
     var openMenu = document.querySelector(".btn-mobile-navigation");
     var closeMenu = document.querySelector(".btn-menu-close");
@@ -65,15 +67,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // filters
+
+
     var openFilters = document.querySelector(".btn-filters-form");
     var filters = document.querySelector(".mobile .filters");
 
     openFilters.addEventListener("touchend", function () {
-        if (filters.classList.contains("active")) {
-            filters.classList.remove("active");
-        } else {
-            filters.classList.add("active");
-        }
+        this.nextElementSibling.classList.toggle("active");
     });
 
 });
